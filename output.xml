@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20220922 16:32:04.172" rpa="false" schemaversion="3">
+<suite id="s1" name="Selenium Helloworld" source="C:\.vscode\Selenium Helloworld">
+<suite id="s1-s1" name="Bookmyshow" source="C:\.vscode\Selenium Helloworld\bookmyshow.robot">
+<test id="s1-s1-t1" name="Open the Browser and go to bookmyshow" line="12">
+<kw name="Open site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url1}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220922 16:32:04.767" level="INFO">Opening browser 'Firefox' to base url 'https://in.bookmyshow.com/explore/home/hyderabad'.</msg>
+<msg timestamp="20220922 16:32:04.771" level="INFO">Firefox driver log is always forced to to: C:\.vscode\Selenium Helloworld\geckodriver-9.log</msg>
+<status status="PASS" starttime="20220922 16:32:04.767" endtime="20220922 16:32:39.869"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220922 16:32:39.870" endtime="20220922 16:32:39.874"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220922 16:32:39.875" endtime="20220922 16:32:39.875"/>
+</kw>
+<status status="PASS" starttime="20220922 16:32:04.766" endtime="20220922 16:32:39.876"/>
+</kw>
+<kw name="Search for GSM mall">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://span[@id='3']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220922 16:32:39.878" level="INFO">Clicking element 'xpath://span[@id='3']'.</msg>
+<status status="PASS" starttime="20220922 16:32:39.876" endtime="20220922 16:32:46.283"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="4"]</arg>
+<arg>GSM mall</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220922 16:32:46.283" level="INFO">Typing text 'GSM mall' into text field '//*[@id="4"]'.</msg>
+<msg timestamp="20220922 16:32:50.939" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-58.png"&gt;&lt;img src="selenium-screenshot-58.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220922 16:32:50.940" level="FAIL">InvalidElementStateException: Message: Unable to clear element that cannot be edited: &lt;span id="4" class="sc-jKVCRD jyFDAS"&gt;
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.jsm:12:1
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:192:5
+InvalidElementStateError@chrome://remote/content/shared/webdriver/Errors.jsm:344:5
+interaction.clearElement@chrome://remote/content/marionette/interaction.js:335:11
+clearElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.jsm:195:22
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.jsm:88:16
+</msg>
+<status status="FAIL" starttime="20220922 16:32:46.283" endtime="20220922 16:32:50.950"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="super-container"]/div[2]/div[2]/div[2]/div[1]/div/div[2]/div/div[2]/div/ul/li[1]/div/div[2]/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 16:32:50.951" endtime="20220922 16:32:50.951"/>
+</kw>
+<status status="FAIL" starttime="20220922 16:32:39.876" endtime="20220922 16:32:50.952"/>
+</kw>
+<kw name="Select Date">
+<status status="NOT RUN" starttime="20220922 16:32:50.953" endtime="20220922 16:32:50.953"/>
+</kw>
+<kw name="Click on Showtime">
+<status status="NOT RUN" starttime="20220922 16:32:50.953" endtime="20220922 16:32:50.953"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220922 16:32:50.954" endtime="20220922 16:32:58.585"/>
+</kw>
+<status status="FAIL" starttime="20220922 16:32:04.765" endtime="20220922 16:32:58.586">InvalidElementStateException: Message: Unable to clear element that cannot be edited: &lt;span id="4" class="sc-jKVCRD jyFDAS"&gt;
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.jsm:12:1
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:192:5
+InvalidElementStateError@chrome://remote/content/shared/webdriver/Errors.jsm:344:5
+interaction.clearElement@chrome://remote/content/marionette/interaction.js:335:11
+clearElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.jsm:195:22
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.jsm:88:16
+</status>
+</test>
+<doc>To validate the login form</doc>
+<status status="FAIL" starttime="20220922 16:32:04.239" endtime="20220922 16:32:58.595"/>
+</suite>
+<suite id="s1-s2" name="Datadriven" source="C:\.vscode\Selenium Helloworld\datadriven.robot">
+<test id="s1-s2-t1" name="Login with user rahulshettyacademy and password 12345" line="16">
+<kw name="Login with invalid credentials">
+<arg>xyz</arg>
+<arg>12345</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url3}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220922 16:32:58.693" level="INFO">Opening url 'https://www.rahulshettyacademy.com/loginpagePractise/'</msg>
+<msg timestamp="20220922 16:32:58.693" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220922 16:32:58.696" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20220922 16:32:58.693" endtime="20220922 16:32:58.697"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 16:32:58.698" endtime="20220922 16:32:58.698"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 16:32:58.698" endtime="20220922 16:32:58.698"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:signInBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 16:32:58.698" endtime="20220922 16:32:58.698"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Error_Message_login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20220922 16:32:58.699" endtime="20220922 16:32:58.699"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${result}</var>
+<arg>${Error_Message_login}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 16:32:58.699" endtime="20220922 16:32:58.699"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${result}</arg>
+<arg>Incorrect username/password.</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20220922 16:32:58.699" endtime="20220922 16:32:58.699"/>
+</kw>
+<status status="FAIL" starttime="20220922 16:32:58.690" endtime="20220922 16:32:58.700"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220922 16:32:58.701" endtime="20220922 16:32:58.701"/>
+</kw>
+<status status="FAIL" starttime="20220922 16:32:58.688" endtime="20220922 16:32:58.701">No browser is open.</status>
+</test>
+<doc>To validate the login form</doc>
+<status status="FAIL" starttime="20220922 16:32:58.604" endtime="20220922 16:32:58.702"/>
+</suite>
+<suite id="s1-s3" name="Dictionary" source="C:\.vscode\Selenium Helloworld\Dictionary.robot">
+<test id="s1-s3-t1" name="First Test" line="12">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{data}</var>
+<arg>name=sreenath</arg>
+<arg>job=software</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220922 16:32:09.682" level="INFO">&amp;{data} = { name=sreenath | job=software }</msg>
+<status status="PASS" starttime="20220922 16:32:09.680" endtime="20220922 16:32:09.683"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${data}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220922 16:32:09.684" level="INFO">{'name': 'sreenath', 'job': 'software'}</msg>
+<status status="PASS" starttime="20220922 16:32:09.683" endtime="20220922 16:32:09.684"/>
+</kw>
+<kw name="Dictionary Should Contain Key" library="Collections">
+<arg>${data}</arg>
+<arg>job</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" starttime="20220922 16:32:09.684" endtime="20220922 16:32:09.685"/>
+</kw>
+<kw name="Dictionary Should Contain Value" library="Collections">
+<arg>${data}</arg>
+<arg>software</arg>
+<doc>Fails if ``value`` is not found from ``dictionary``.</doc>
+<status status="PASS" starttime="20220922 16:32:09.685" endtime="20220922 16:32:09.686"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${data}[name]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220922 16:32:09.686" level="INFO">sreenath</msg>
+<status status="PASS" starttime="20220922 16:32:09.686" endtime="20220922 16:32:09.686"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${data}[job]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220922 16:32:09.687" level="INFO">software</msg>
+<status status="PASS" starttime="20220922 16:32:09.687" endtime="20220922 16:32:09.687"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${namekey}</var>
+<arg>${data}</arg>
+<arg>name</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20220922 16:32:09.688" level="INFO">${namekey} = sreenath</msg>
+<status status="PASS" starttime="20220922 16:32:09.688" endtime="20220922 16:32:09.688"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${namekey}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220922 16:32:09.689" level="INFO">sreenath</msg>
+<status status="PASS" starttime="20220922 16:32:09.689" endtime="20220922 16:32:09.689"/>
+</kw>
+<status status="PASS" starttime="20220922 16:32:09.678" endtime="20220922 16:32:09.690"/>
+</test>
+<status status="PASS" starttime="20220922 16:32:09.467" endtime="20220922 16:32:09.692"/>
+</suite>
+<suite id="s1-s4" name="Helloworld2" source="C:\.vscode\Selenium Helloworld\Helloworld2.robot">
+<test id="s1-s4-t1" name="First Test" line="5">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.amazon.in/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220922 16:32:09.734" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.in/'.</msg>
+<status status="PASS" starttime="20220922 16:32:09.733" endtime="20220922 16:32:19.490"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220922 16:32:19.492" endtime="20220922 16:32:21.704"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220922 16:32:24.714" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220922 16:32:21.707" endtime="20220922 16:32:24.715"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@id='twotabsearchtextbox']</arg>
+<arg>laptops</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220922 16:32:24.717" level="INFO">Typing text 'laptops' into text field '//input[@id='twotabsearchtextbox']'.</msg>
+<status status="PASS" starttime="20220922 16:32:24.716" endtime="20220922 16:32:31.120"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//input[@id='nav-search-submit-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220922 16:32:31.130" level="INFO">Clicking button '//input[@id='nav-search-submit-button']'.</msg>
+<status status="PASS" starttime="20220922 16:32:31.129" endtime="20220922 16:32:44.807"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220922 16:32:47.822" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220922 16:32:44.808" endtime="20220922 16:32:47.822"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220922 16:32:47.823" endtime="20220922 16:32:52.727"/>
+</kw>
+<status status="PASS" starttime="20220922 16:32:09.726" endtime="20220922 16:32:52.729"/>
+</test>
+<status status="PASS" starttime="20220922 16:32:09.701" endtime="20220922 16:32:52.735"/>
+</suite>
+<suite id="s1-s5" name="Linkedin" source="C:\.vscode\Selenium Helloworld\Linkedin.robot">
+<test id="s1-s5-t1" name="First Test" line="5">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.linkedin.com/feed/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220922 16:32:52.820" level="INFO">Opening browser 'Chrome' to base url 'https://www.linkedin.com/feed/'.</msg>
+<status status="PASS" starttime="20220922 16:32:52.819" endtime="20220922 16:32:59.635"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220922 16:32:59.636" endtime="20220922 16:33:07.316"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220922 16:33:10.317" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220922 16:33:07.317" endtime="20220922 16:33:10.317"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//a[@class='main__sign-in-link']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220922 16:33:10.319" endtime="20220922 16:33:17.426"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//a[@class='main__sign-in-link']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220922 16:33:17.426" endtime="20220922 16:33:23.485"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>//a[@class='main__sign-in-link']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220922 16:33:23.486" level="INFO">Clicking link '//a[@class='main__sign-in-link']'.</msg>
+<status status="PASS" starttime="20220922 16:33:23.485" endtime="20220922 16:33:31.345"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220922 16:33:34.355" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220922 16:33:31.346" endtime="20220922 16:33:34.355"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220922 16:33:34.357" endtime="20220922 16:33:38.711"/>
+</kw>
+<status status="PASS" starttime="20220922 16:32:52.818" endtime="20220922 16:33:38.712"/>
+</test>
+<status status="PASS" starttime="20220922 16:32:52.739" endtime="20220922 16:33:38.715"/>
+</suite>
+<suite id="s1-s6" name="ListRetrieveselenium" source="C:\.vscode\Selenium Helloworld\ListRetrieveselenium.robot">
+<test id="s1-s6-t1" name="Open the Browser and search for potato" line="12">
+<kw name="Open site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220922 16:33:38.738" level="INFO">Opening browser 'Firefox' to base url 'https://rahulshettyacademy.com/seleniumPractise/#/'.</msg>
+<msg timestamp="20220922 16:33:38.744" level="INFO">Firefox driver log is always forced to to: C:\.vscode\Selenium Helloworld\geckodriver-10.log</msg>
+<status status="PASS" starttime="20220922 16:33:38.736" endtime="20220922 16:41:37.732"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220922 16:41:37.764" endtime="20220922 16:41:39.782"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220922 16:41:39.784" endtime="20220922 16:41:39.795"/>
+</kw>
+<status status="PASS" starttime="20220922 16:33:38.736" endtime="20220922 16:41:39.796"/>
+</kw>
+<kw name="Search with keyword Potato">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>class:search-keyword</arg>
+<arg>Potato</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220922 16:41:39.838" level="INFO">Typing text 'Potato' into text field 'class:search-keyword'.</msg>
+<status status="PASS" starttime="20220922 16:41:39.826" endtime="20220922 16:41:46.092"/>
+</kw>
+<status status="PASS" starttime="20220922 16:41:39.821" endtime="20220922 16:41:46.093"/>
+</kw>
+<kw name="Add to cart">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:(//button[@type='button'])[2]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220922 16:41:46.097" level="INFO">Clicking button 'xpath:(//button[@type='button'])[2]'.</msg>
+<status status="PASS" starttime="20220922 16:41:46.097" endtime="20220922 16:41:56.561"/>
+</kw>
+<status status="PASS" starttime="20220922 16:41:46.094" endtime="20220922 16:41:56.561"/>
+</kw>
+<kw name="Go to cart and check value">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/header/div/div[3]/div[1]/table/tbody/tr[1]/td[3]/strong</arg>
+<arg>1</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220922 16:41:56.566" level="INFO">Verifying element '//*[@id="root"]/div/header/div/div[3]/div[1]/table/tbody/tr[1]/td[3]/strong' contains exact text '1'.</msg>
+<status status="PASS" starttime="20220922 16:41:56.564" endtime="20220922 16:42:00.618"/>
+</kw>
+<status status="PASS" starttime="20220922 16:41:56.562" endtime="20220922 16:42:00.618"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220922 16:42:00.629" endtime="20220922 16:42:03.604"/>
+</kw>
+<status status="PASS" starttime="20220922 16:33:38.734" endtime="20220922 16:42:03.605"/>
+</test>
+<doc>To validate the login form</doc>
+<status status="PASS" starttime="20220922 16:33:38.720" endtime="20220922 16:42:03.618"/>
+</suite>
+<suite id="s1-s7" name="Multipletestdata" source="C:\.vscode\Selenium Helloworld\multipletestdata.robot">
+<test id="s1-s7-t1" name="Invalid username" line="14">
+<kw name="Login with invalid credentials">
+<arg>asded</arg>
+<arg>sreenath</arg>
+<kw name="Go to loginpagePractises">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url3}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220922 16:42:03.659" level="INFO">Opening browser 'Firefox' to base url 'https://www.rahulshettyacademy.com/loginpagePractise/'.</msg>
+<msg timestamp="20220922 16:42:03.664" level="INFO">Firefox driver log is always forced to to: C:\.vscode\Selenium Helloworld\geckodriver-14.log</msg>
+<status status="PASS" starttime="20220922 16:42:03.658" endtime="20220922 16:42:48.828"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220922 16:42:48.837" endtime="20220922 16:42:50.864"/>
+</kw>
+<status status="PASS" starttime="20220922 16:42:03.655" endtime="20220922 16:42:50.865"/>
+</kw>
+<kw name="Enter invalid credentials">
+<msg timestamp="20220922 16:42:51.067" level="FAIL">Keyword 'Enter invalid credentials' expected 2 arguments, got 0.</msg>
+<status status="FAIL" starttime="20220922 16:42:50.865" endtime="20220922 16:42:51.067"/>
+</kw>
+<status status="FAIL" starttime="20220922 16:42:03.655" endtime="20220922 16:42:51.069"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220922 16:42:51.238" endtime="20220922 16:42:55.329"/>
+</kw>
+<status status="FAIL" starttime="20220922 16:42:03.654" endtime="20220922 16:42:55.330">Keyword 'Enter invalid credentials' expected 2 arguments, got 0.</status>
+</test>
+<test id="s1-s7-t2" name="Invalid password" line="15">
+<kw name="Login with invalid credentials">
+<arg>rahulshettyacademy</arg>
+<arg>password</arg>
+<kw name="Go to loginpagePractises">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url3}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220922 16:42:55.340" level="INFO">Opening browser 'Firefox' to base url 'https://www.rahulshettyacademy.com/loginpagePractise/'.</msg>
+<msg timestamp="20220922 16:42:55.344" level="INFO">Firefox driver log is always forced to to: C:\.vscode\Selenium Helloworld\geckodriver-16.log</msg>
+<status status="PASS" starttime="20220922 16:42:55.339" endtime="20220922 16:43:12.334"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220922 16:43:12.335" endtime="20220922 16:43:14.339"/>
+</kw>
+<status status="PASS" starttime="20220922 16:42:55.337" endtime="20220922 16:43:14.339"/>
+</kw>
+<kw name="Enter invalid credentials">
+<msg timestamp="20220922 16:43:14.341" level="FAIL">Keyword 'Enter invalid credentials' expected 2 arguments, got 0.</msg>
+<status status="FAIL" starttime="20220922 16:43:14.340" endtime="20220922 16:43:14.341"/>
+</kw>
+<status status="FAIL" starttime="20220922 16:42:55.337" endtime="20220922 16:43:14.342"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220922 16:43:14.347" endtime="20220922 16:43:17.546"/>
+</kw>
+<status status="FAIL" starttime="20220922 16:42:55.335" endtime="20220922 16:43:17.547">Keyword 'Enter invalid credentials' expected 2 arguments, got 0.</status>
+</test>
+<test id="s1-s7-t3" name="Special Character" line="16">
+<status status="FAIL" starttime="20220922 16:43:17.551" endtime="20220922 16:43:17.553">Test contains no keywords.</status>
+</test>
+<doc>To validate the login form</doc>
+<status status="FAIL" starttime="20220922 16:42:03.626" endtime="20220922 16:43:17.556"/>
+</suite>
+<suite id="s1-s8" name="PostApi" source="C:\.vscode\Selenium Helloworld\PostApi.robot">
+<test id="s1-s8-t1" name="First Test" line="14">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{body}</var>
+<arg>name=sreenath</arg>
+<arg>email=sreenth@gmail.com</arg>
+<arg>title=Mr</arg>
+<arg>birth_date=12312</arg>
+<arg>birth_year=1983</arg>
+<arg>firstname=injeti</arg>
+<arg>lastname=srenath</arg>
+<arg>company=firstname</arg>
+<arg>city=hyderabad</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220922 16:43:17.592" level="INFO">&amp;{body} = { name=sreenath | email=sreenth@gmail.com | title=Mr | birth_date=12312 | birth_year=1983 | firstname=injeti | lastname=srenath | company=firstname | city=hyderabad }</msg>
+<status status="PASS" starttime="20220922 16:43:17.587" endtime="20220922 16:43:17.592"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${body}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220922 16:43:17.596" level="INFO">{'name': 'sreenath', 'email': 'sreenth@gmail.com', 'title': 'Mr', 'birth_date': '12312', 'birth_year': '1983', 'firstname': 'injeti', 'lastname': 'srenath', 'company': 'firstname', 'city': 'hyderabad'}</msg>
+<status status="PASS" starttime="20220922 16:43:17.594" endtime="20220922 16:43:17.597"/>
+</kw>
+<kw name="GET" library="RequestsLibrary">
+<var>${response}</var>
+<arg>${Base_URL}/api/productsList</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20220922 16:43:18.881" level="INFO">GET Request : url=https://automationexercise.com//api/productsList 
+ path_url=//api/productsList 
+ headers={'User-Agent': 'python-requests/2.28.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20220922 16:43:18.884" level="INFO">GET Response : url=https://automationexercise.com//api/productsList 
+ status=200, reason=OK 
+ headers={'Date': 'Thu, 22 Sep 2022 11:13:19 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'vary': 'Accept,Cookie,Accept-Encoding', 'referrer-policy': 'same-origin', 'x-frame-options': 'DENY', 'x-content-type-options': 'nosniff', 'allow': 'PUT, OPTIONS, POST, DELETE, GET', 'x-powered-by': 'Phusion Passenger 6.0.7', 'status': '200 OK', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=57Q2B7WIALhJGDvio5wBNcGqYrCm8m3HK1FJ%2BTB8U6es1O%2BlLWamcAGy2WhrFsjHQbDneoLTsk0YgrM8DqzrMtRsuy%2Foj2JfwwMZdqu%2FF92B6vBsGyiOuhBRB%2B8%2BPsjmDLlgI1%2FeSnd3"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '74ea9c4a8ac3c958-HYD', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400, h3-29=":443"; ma=86400'} 
+ body={"responseCode": 200, "products": [{"id": 1, "name": "Blue Top", "price": "Rs. 500", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 2, "name": "Men Tshirt", "price": "Rs. 400", "brand": "H&amp;M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 3, "name": "Sleeveless Dress", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 4, "name": "Stylish Dress", "price": "Rs. 1500", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 5, "name": "Winter Top", "price": "Rs. 600", "brand": "Mast &amp; Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 6, "name": "Summer White Top", "price": "Rs. 400", "brand": "H&amp;M", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 7, "name": "Madame Top For Women", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 8, "name": "Fancy Green Top", "price": "Rs. 700", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 11, "name": "Sleeves Printed Top - White", "price": "Rs. 499", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops &amp; Shirts"}}, {"id": 12, "name": "Half Sleeves Top Schiffli Detailing - Pink", "price": "Rs. 359", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops &amp; Shirts"}}, {"id": 13, "name": "Frozen Tops For Kids", "price": "Rs. 278", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops &amp; Shirts"}}, {"id": 14, "name": "Full Sleeves Top Cherry - Pink", "price": "Rs. 679", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops &amp; Shirts"}}, {"id": 15, "name": "Printed Off Shoulder Top - White", "price": "Rs. 315", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops &amp; Shirts"}}, {"id": 16, "name": "Sleeves Top and Short - Blue &amp; Pink", "price": "Rs. 478", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 18, "name": "Little Girls Mr. Panda Shirt", "price": "Rs. 1200", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops &amp; Shirts"}}, {"id": 19, "name": "Sleeveless Unicorn Patch Gown - Pink", "price": "Rs. 1050", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 20, "name": "Cotton Mull Embroidered Dress", "price": "Rs. 1190", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 21, "name": "Blue Cotton Indie Mickey Dress", "price": "Rs. 1530", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 22, "name": "Long Maxi Tulle Fancy Dress Up Outfits -Pink", "price": "Rs. 1600", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 23, "name": "Sleeveless Unicorn Print Fit &amp; Flare Net Dress - Multi", "price": "Rs. 1100", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 24, "name": "Colour Blocked Shirt \u2013 Sky Blue", "price": "Rs. 849", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops &amp; Shirts"}}, {"id": 28, "name": "Pure Cotton V-Neck T-Shirt", "price": "Rs. 1299", "brand": "H&amp;M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 29, "name": "Green Side Placket Detail T-Shirt", "price": "Rs. 1000", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 30, "name": "Premium Polo T-Shirts", "price": "Rs. 1500", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 31, "name": "Pure Cotton Neon Green Tshirt", "price": "Rs. 850", "brand": "H&amp;M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 33, "name": "Soft Stretch Jeans", "price": "Rs. 799", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 35, "name": "Regular Fit Straight Jeans", "price": "Rs. 1200", "brand": "H&amp;M", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 37, "name": "Grunt Blue Slim Fit Jeans", "price": "Rs. 1400", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 38, "name": "Rose Pink Embroidered Maxi Dress", "price": "Rs. 2300", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 39, "name": "Cotton Silk Hand Block Print Saree", "price": "Rs. 3000", "brand": "Biba", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 40, "name": "Rust Red Linen Saree", "price": "Rs. 3500", "brand": "Biba", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 41, "name": "Beautiful Peacock Blue Cotton Linen Saree", "price": "Rs. 5000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 42, "name": "Lace Top For Women", "price": "Rs. 1400", "brand": "Mast &amp; Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 43, "name": "GRAPHIC DESIGN MEN T SHIRT - BLUE", "price": "Rs. 1389", "brand": "Mast &amp; Harbour", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}]} 
+ </msg>
+<msg timestamp="20220922 16:43:18.885" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220922 16:43:17.599" endtime="20220922 16:43:18.885"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220922 16:43:18.886" level="INFO">&lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220922 16:43:18.886" endtime="20220922 16:43:18.886"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${response.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220922 16:43:18.893" level="INFO">{'responseCode': 200, 'products': [{'id': 1, 'name': 'Blue Top', 'price': 'Rs. 500', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Tops'}}, {'id': 2, 'name': 'Men Tshirt', 'price': 'Rs. 400', 'brand': 'H&amp;M', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Tshirts'}}, {'id': 3, 'name': 'Sleeveless Dress', 'price': 'Rs. 1000', 'brand': 'Madame', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Dress'}}, {'id': 4, 'name': 'Stylish Dress', 'price': 'Rs. 1500', 'brand': 'Madame', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Dress'}}, {'id': 5, 'name': 'Winter Top', 'price': 'Rs. 600', 'brand': 'Mast &amp; Harbour', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Tops'}}, {'id': 6, 'name': 'Summer White Top', 'price': 'Rs. 400', 'brand': 'H&amp;M', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Tops'}}, {'id': 7, 'name': 'Madame Top For Women', 'price': 'Rs. 1000', 'brand': 'Madame', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Tops'}}, {'id': 8, 'name': 'Fancy Green Top', 'price': 'Rs. 700', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Tops'}}, {'id': 11, 'name': 'Sleeves Printed Top - White', 'price': 'Rs. 499', 'brand': 'Babyhug', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Tops &amp; Shirts'}}, {'id': 12, 'name': 'Half Sleeves Top Schiffli Detailing - Pink', 'price': 'Rs. 359', 'brand': 'Babyhug', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Tops &amp; Shirts'}}, {'id': 13, 'name': 'Frozen Tops For Kids', 'price': 'Rs. 278', 'brand': 'Allen Solly Junior', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Tops &amp; Shirts'}}, {'id': 14, 'name': 'Full Sleeves Top Cherry - Pink', 'price': 'Rs. 679', 'brand': 'Kookie Kids', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Tops &amp; Shirts'}}, {'id': 15, 'name': 'Printed Off Shoulder Top - White', 'price': 'Rs. 315', 'brand': 'Babyhug', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Tops &amp; Shirts'}}, {'id': 16, 'name': 'Sleeves Top and Short - Blue &amp; Pink', 'price': 'Rs. 478', 'brand': 'Babyhug', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Dress'}}, {'id': 18, 'name': 'Little Girls Mr. Panda Shirt', 'price': 'Rs. 1200', 'brand': 'Kookie Kids', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Tops &amp; Shirts'}}, {'id': 19, 'name': 'Sleeveless Unicorn Patch Gown - Pink', 'price': 'Rs. 1050', 'brand': 'Allen Solly Junior', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Dress'}}, {'id': 20, 'name': 'Cotton Mull Embroidered Dress', 'price': 'Rs. 1190', 'brand': 'Kookie Kids', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Dress'}}, {'id': 21, 'name': 'Blue Cotton Indie Mickey Dress', 'price': 'Rs. 1530', 'brand': 'Biba', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Dress'}}, {'id': 22, 'name': 'Long Maxi Tulle Fancy Dress Up Outfits -Pink', 'price': 'Rs. 1600', 'brand': 'Biba', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Dress'}}, {'id': 23, 'name': 'Sleeveless Unicorn Print Fit &amp; Flare Net Dress - Multi', 'price': 'Rs. 1100', 'brand': 'Biba', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Dress'}}, {'id': 24, 'name': 'Colour Blocked Shirt – Sky Blue', 'price': 'Rs. 849', 'brand': 'Allen Solly Junior', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Tops &amp; Shirts'}}, {'id': 28, 'name': 'Pure Cotton V-Neck T-Shirt', 'price': 'Rs. 1299', 'brand': 'H&amp;M', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Tshirts'}}, {'id': 29, 'name': 'Green Side Placket Detail T-Shirt', 'price': 'Rs. 1000', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Tshirts'}}, {'id': 30, 'name': 'Premium Polo T-Shirts', 'price': 'Rs. 1500', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Tshirts'}}, {'id': 31, 'name': 'Pure Cotton Neon Green Tshirt', 'price': 'Rs. 850', 'brand': 'H&amp;M', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Tshirts'}}, {'id': 33, 'name': 'Soft Stretch Jeans', 'price': 'Rs. 799', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Jeans'}}, {'id': 35, 'name': 'Regular Fit Straight Jeans', 'price': 'Rs. 1200', 'brand': 'H&amp;M', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Jeans'}}, {'id': 37, 'name': 'Grunt Blue Slim Fit Jeans', 'price': 'Rs. 1400', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Jeans'}}, {'id': 38, 'name': 'Rose Pink Embroidered Maxi Dress', 'price': 'Rs. 2300', 'brand': 'Madame', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Dress'}}, {'id': 39, 'name': 'Cotton Silk Hand Block Print Saree', 'price': 'Rs. 3000', 'brand': 'Biba', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Saree'}}, {'id': 40, 'name': 'Rust Red Linen Saree', 'price': 'Rs. 3500', 'brand': 'Biba', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Saree'}}, {'id': 41, 'name': 'Beautiful Peacock Blue Cotton Linen Saree', 'price': 'Rs. 5000', 'brand': 'Madame', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Saree'}}, {'id': 42, 'name': 'Lace Top For Women', 'price': 'Rs. 1400', 'brand': 'Mast &amp; Harbour', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Tops'}}, {'id': 43, 'name': 'GRAPHIC DESIGN MEN T SHIRT - BLUE', 'price': 'Rs. 1389', 'brand': 'Mast &amp; Harbour', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Tshirts'}}]}</msg>
+<status status="PASS" starttime="20220922 16:43:18.887" endtime="20220922 16:43:18.894"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220922 16:43:18.896" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220922 16:43:18.895" endtime="20220922 16:43:18.896"/>
+</kw>
+<kw name="Dictionary Should Contain Key" library="Collections">
+<arg>${response.json()}</arg>
+<arg>products</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" starttime="20220922 16:43:18.897" endtime="20220922 16:43:18.899"/>
+</kw>
+<kw name="Dictionary Should Contain Key" library="Collections">
+<arg>${response.json()}</arg>
+<arg>responseCode</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" starttime="20220922 16:43:18.899" endtime="20220922 16:43:18.901"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>@{products}</var>
+<arg>${response.json()}</arg>
+<arg>products</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20220922 16:43:18.903" level="INFO">@{products} = [ {'id': 1, 'name': 'Blue Top', 'price': 'Rs. 500', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Tops'}} | {'id': 2, 'name': 'Men Tshirt', 'price': 'Rs. 400', 'brand':...</msg>
+<status status="PASS" starttime="20220922 16:43:18.902" endtime="20220922 16:43:18.903"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${products}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220922 16:43:18.905" level="INFO">[{'id': 1, 'name': 'Blue Top', 'price': 'Rs. 500', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Tops'}}, {'id': 2, 'name': 'Men Tshirt', 'price': 'Rs. 400', 'brand': 'H&amp;M', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Tshirts'}}, {'id': 3, 'name': 'Sleeveless Dress', 'price': 'Rs. 1000', 'brand': 'Madame', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Dress'}}, {'id': 4, 'name': 'Stylish Dress', 'price': 'Rs. 1500', 'brand': 'Madame', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Dress'}}, {'id': 5, 'name': 'Winter Top', 'price': 'Rs. 600', 'brand': 'Mast &amp; Harbour', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Tops'}}, {'id': 6, 'name': 'Summer White Top', 'price': 'Rs. 400', 'brand': 'H&amp;M', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Tops'}}, {'id': 7, 'name': 'Madame Top For Women', 'price': 'Rs. 1000', 'brand': 'Madame', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Tops'}}, {'id': 8, 'name': 'Fancy Green Top', 'price': 'Rs. 700', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Tops'}}, {'id': 11, 'name': 'Sleeves Printed Top - White', 'price': 'Rs. 499', 'brand': 'Babyhug', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Tops &amp; Shirts'}}, {'id': 12, 'name': 'Half Sleeves Top Schiffli Detailing - Pink', 'price': 'Rs. 359', 'brand': 'Babyhug', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Tops &amp; Shirts'}}, {'id': 13, 'name': 'Frozen Tops For Kids', 'price': 'Rs. 278', 'brand': 'Allen Solly Junior', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Tops &amp; Shirts'}}, {'id': 14, 'name': 'Full Sleeves Top Cherry - Pink', 'price': 'Rs. 679', 'brand': 'Kookie Kids', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Tops &amp; Shirts'}}, {'id': 15, 'name': 'Printed Off Shoulder Top - White', 'price': 'Rs. 315', 'brand': 'Babyhug', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Tops &amp; Shirts'}}, {'id': 16, 'name': 'Sleeves Top and Short - Blue &amp; Pink', 'price': 'Rs. 478', 'brand': 'Babyhug', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Dress'}}, {'id': 18, 'name': 'Little Girls Mr. Panda Shirt', 'price': 'Rs. 1200', 'brand': 'Kookie Kids', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Tops &amp; Shirts'}}, {'id': 19, 'name': 'Sleeveless Unicorn Patch Gown - Pink', 'price': 'Rs. 1050', 'brand': 'Allen Solly Junior', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Dress'}}, {'id': 20, 'name': 'Cotton Mull Embroidered Dress', 'price': 'Rs. 1190', 'brand': 'Kookie Kids', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Dress'}}, {'id': 21, 'name': 'Blue Cotton Indie Mickey Dress', 'price': 'Rs. 1530', 'brand': 'Biba', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Dress'}}, {'id': 22, 'name': 'Long Maxi Tulle Fancy Dress Up Outfits -Pink', 'price': 'Rs. 1600', 'brand': 'Biba', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Dress'}}, {'id': 23, 'name': 'Sleeveless Unicorn Print Fit &amp; Flare Net Dress - Multi', 'price': 'Rs. 1100', 'brand': 'Biba', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Dress'}}, {'id': 24, 'name': 'Colour Blocked Shirt – Sky Blue', 'price': 'Rs. 849', 'brand': 'Allen Solly Junior', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Tops &amp; Shirts'}}, {'id': 28, 'name': 'Pure Cotton V-Neck T-Shirt', 'price': 'Rs. 1299', 'brand': 'H&amp;M', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Tshirts'}}, {'id': 29, 'name': 'Green Side Placket Detail T-Shirt', 'price': 'Rs. 1000', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Tshirts'}}, {'id': 30, 'name': 'Premium Polo T-Shirts', 'price': 'Rs. 1500', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Tshirts'}}, {'id': 31, 'name': 'Pure Cotton Neon Green Tshirt', 'price': 'Rs. 850', 'brand': 'H&amp;M', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Tshirts'}}, {'id': 33, 'name': 'Soft Stretch Jeans', 'price': 'Rs. 799', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Jeans'}}, {'id': 35, 'name': 'Regular Fit Straight Jeans', 'price': 'Rs. 1200', 'brand': 'H&amp;M', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Jeans'}}, {'id': 37, 'name': 'Grunt Blue Slim Fit Jeans', 'price': 'Rs. 1400', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Jeans'}}, {'id': 38, 'name': 'Rose Pink Embroidered Maxi Dress', 'price': 'Rs. 2300', 'brand': 'Madame', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Dress'}}, {'id': 39, 'name': 'Cotton Silk Hand Block Print Saree', 'price': 'Rs. 3000', 'brand': 'Biba', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Saree'}}, {'id': 40, 'name': 'Rust Red Linen Saree', 'price': 'Rs. 3500', 'brand': 'Biba', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Saree'}}, {'id': 41, 'name': 'Beautiful Peacock Blue Cotton Linen Saree', 'price': 'Rs. 5000', 'brand': 'Madame', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Saree'}}, {'id': 42, 'name': 'Lace Top For Women', 'price': 'Rs. 1400', 'brand': 'Mast &amp; Harbour', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Tops'}}, {'id': 43, 'name': 'GRAPHIC DESIGN MEN T SHIRT - BLUE', 'price': 'Rs. 1389', 'brand': 'Mast &amp; Harbour', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Tshirts'}}]</msg>
+<status status="PASS" starttime="20220922 16:43:18.904" endtime="20220922 16:43:18.905"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" starttime="20220922 16:43:18.906" endtime="20220922 16:43:18.907"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response.json()}[products][0][price]</arg>
+<arg>Rs. 500</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220922 16:43:18.908" endtime="20220922 16:43:18.912"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response.json()}[products][1][brand]</arg>
+<arg>H&amp;M</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220922 16:43:18.912" endtime="20220922 16:43:18.914"/>
+</kw>
+<status status="PASS" starttime="20220922 16:43:17.585" endtime="20220922 16:43:18.915"/>
+</test>
+<status status="PASS" starttime="20220922 16:43:17.562" endtime="20220922 16:43:18.917"/>
+</suite>
+<suite id="s1-s9" name="rahulshettyUIactions" source="C:\.vscode\Selenium Helloworld\rahulshettyUIactions.robot">
+<test id="s1-s9-t1" name="First Test" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220922 16:43:18.932" level="INFO">Opening browser 'Firefox' to base url 'https://rahulshettyacademy.com/AutomationPractice/'.</msg>
+<msg timestamp="20220922 16:43:18.935" level="INFO">Firefox driver log is always forced to to: C:\.vscode\Selenium Helloworld\geckodriver-17.log</msg>
+<status status="PASS" starttime="20220922 16:43:18.931" endtime="20220922 16:43:42.479"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220922 16:43:42.480" endtime="20220922 16:43:44.486"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220922 16:43:44.491" endtime="20220922 16:43:44.493"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//label[@for='radio1']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220922 16:43:44.494" endtime="20220922 16:43:48.585"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>radioButton</arg>
+<arg>radio1</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20220922 16:43:48.591" level="INFO">Selecting 'radio1' from radio button 'radioButton'.</msg>
+<status status="PASS" starttime="20220922 16:43:48.590" endtime="20220922 16:43:55.492"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>option1</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20220922 16:43:55.496" level="INFO">Selecting checkbox 'option1'.</msg>
+<status status="PASS" starttime="20220922 16:43:55.494" endtime="20220922 16:44:03.775"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>option2</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20220922 16:44:03.777" level="INFO">Selecting checkbox 'option2'.</msg>
+<status status="PASS" starttime="20220922 16:44:03.776" endtime="20220922 16:44:12.553"/>
+</kw>
+<kw name="Unselect Checkbox" library="SeleniumLibrary">
+<arg>option1</arg>
+<doc>Removes the selection of checkbox identified by ``locator``.</doc>
+<msg timestamp="20220922 16:44:12.556" level="INFO">Unselecting checkbox 'option1'.</msg>
+<status<status status="PASS" starttime="20220922 16:42:56.507" endtime="20220922 16:43:00.691"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>radioButton</arg>
+<arg>radio1</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20220922 16:43:00.695" level="INFO">Selecting 'radio1' from radio button 'radioButton'.</msg>
+<status status="PASS" starttime="20220922 16:43:00.692" endtime="20220922 16:43:07.508"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>option1</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20220922 16:43:07.512" level="INFO">Selecting checkbox 'option1'.</msg>
+<status status="PASS" starttime="20220922 16:43:07.510" endtime="20220922 16:43:15.776"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>option2</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20220922 16:43:15.779" level="INFO">Selecting checkbox 'option2'.</msg>
+<status status="PASS" starttime="20220922 16:43:15.777" endtime="20220922 16:43:24.085"/>
+</kw>
+<kw name="Unselect Checkbox" library="SeleniumLibrary">
+<arg>option1</arg>
+<doc>Removes the selection of checkbox identified by ``locator``.</doc>
+<msg timestamp="20220922 16:43:24.088" level="INFO">Unselecting checkbox 'option1'.</msg>
+<status status="PASS" starttime="20220922 16:43:24.086" endtime="20220922 16:43:32.896"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>dropdown-class-example</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20220922 16:43:32.899" level="INFO">Selecting options from selection list 'dropdown-class-example' by index 2.</msg>
+<status status="PASS" starttime="20220922 16:43:32.896" endtime="20220922 16:43:52.425"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>dropdown-class-example</arg>
+<arg>option3</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220922 16:43:52.425" level="INFO">Selecting options from selection list 'dropdown-class-example' by value option3.</msg>
+<status status="PASS" starttime="20220922 16:43:52.425" endtime="20220922 16:44:04.748"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@id='openwindow']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220922 16:44:04.749" level="INFO">Clicking button '//button[@id='openwindow']'.</msg>
+<status status="PASS" starttime="20220922 16:44:04.748" endtime="20220922 16:44:15.451"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>QA Click Academy | Selenium,Jmeter,SoapUI,Appium,Database testing,QA Training Academy</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220922 16:44:15.453" endtime="20220922 16:44:41.788"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url1}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220922 16:44:43.810" level="INFO">${url1} = http://www.qaclickacademy.com/</msg>
+<status status="PASS" starttime="20220922 16:44:41.790" endtime="20220922 16:44:43.811"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${url1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 16:44:43.817" endtime="20220922 16:44:43.835"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>Practice Page</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220922 16:44:43.836" endtime="20220922 16:44:59.961"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url2}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220922 16:45:01.972" level="INFO">${url2} = https://rahulshettyacademy.com/AutomationPractice/</msg>
+<status status="PASS" starttime="20220922 16:44:59.963" endtime="20220922 16:45:01.972"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${url2}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 16:45:01.972" endtime="20220922 16:45:01.976"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[@id='opentab']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220922 16:45:01.981" level="INFO">Clicking link 'xpath://a[@id='opentab']'.</msg>
+<status status="PASS" starttime="20220922 16:45:01.978" endtime="20220922 16:45:08.670"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>Rahul Shetty Academy</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220922 16:45:08.677" endtime="20220922 16:45:45.111"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url3}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220922 16:45:47.120" level="INFO">${url3} = https://www.rahulshettyacademy.com/</msg>
+<status status="PASS" starttime="20220922 16:45:45.111" endtime="20220922 16:45:47.120"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${url3}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 16:45:47.120" endtime="20220922 16:45:47.122"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>Practice Page</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220922 16:45:47.123" endtime="20220922 16:46:03.251"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url4}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220922 16:46:05.256" level="INFO">${url4} = https://rahulshettyacademy.com/AutomationPractice/</msg>
+<status status="PASS" starttime="20220922 16:46:03.253" endtime="20220922 16:46:05.256"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${url4}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220922 16:46:05.256" endtime="20220922 16:46:05.256"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>enter-name</arg>
+<arg>sreenath</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220922 16:46:05.261" level="INFO">Typing text 'sreenath' into text field 'enter-name'.</msg>
+<status status="PASS" starttime="20220922 16:46:05.259" endtime="20220922 16:46:11.381"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://input[@id='confirmbtn']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220922 16:46:11.385" level="INFO">Clicking button 'xpath://input[@id='confirmbtn']'.</msg>
+<status status="PASS" starttime="20220922 16:46:11.383" endtime="20220922 16:46:17.607"/>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20220922 16:46:17.614" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20220922 16:46:17.608" endtime="20220922 16:46:24.666"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath://button[@id='mousehover']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220922 16:46:24.670" level="INFO">Simulating Mouse Over on element 'xpath://button[@id='mousehover']'.</msg>
+<msg timestamp="20220922 16:46:29.131" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-60.png"&gt;&lt;img src="selenium-screenshot-60.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220922 16:46:29.144" level="FAIL">MoveTargetOutOfBoundsException: Message: (81, 1007) is out of bounds of viewport width (1366) and height (643)
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.jsm:12:1
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:192:5
+MoveTargetOutOfBoundsError@chrome://remote/content/shared/webdriver/Errors.jsm:382:5
+assertInViewPort@chrome://remote/content/marionette/action.js:1946:11
+dispatch@chrome://remote/content/marionette/action.js:1000:21
+dispatch/pendingEvents&lt;@chrome://remote/content/marionette/action.js:1691:14
+dispatch@chrome://remote/content/marionette/action.js:1690:39
+dispatch/chainEvents&lt;@chrome://remote/content/marionette/action.js:1617:27
+dispatch@chrome://remote/content/marionette/action.js:1619:7
+performActions@chrome://remote/content/marionette/actors/MarionetteCommandsChild.jsm:470:23
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.jsm:145:31
+</msg>
+<status status="FAIL" starttime="20220922 16:46:24.667" endtime="20220922 16:46:29.924"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:(//div[@class='mouse-hover-content']/a)[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220922 16:46:29.925" endtime="20220922 16:46:29.925"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url5}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="NOT RUN" starttime="20220922 16:46:29.926" endtime="20220922 16:46:29.926"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>{url5}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220922 16:46:29.927" endtime="20220922 16:46:29.927"/>
+</kw>
+<tag>SMOKE</tag>
+<status status="FAIL" starttime="20220922 16:42:13.579" endtime="20220922 16:46:29.934">MoveTargetOutOfBoundsException: Message: (81, 1007) is out of bounds of viewport width (1366) and height (643)
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.jsm:12:1
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:192:5
+MoveTargetOutOfBoundsError@chrome://remote/content/shared/webdriver/Errors.jsm:382:5
+assertInViewPort@chrome://remote/content/marionette/action.js:1946:11
+dispatch@chrome://remote/content/marionette/action.js:1000:21
+dispatch/pendingEvents&lt;@chrome://remote/content/marionette/action.js:1691:14
+dispatch@chrome://remote/content/marionette/action.js:1690:39
+dispatch/chainEvents&lt;@chrome://remote/content/marionette/action.js:1617:27
+dispatch@chrome://remote/content/marionette/action.js:1619:7
+performActions@chrome://remote/content/marionette/actors/MarionetteCommandsChild.jsm:470:23
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.jsm:145:31
+</status>
+</test>
+<test id="s1-s9-t2" name="Second Test" line="61">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220922 16:46:29.954" level="INFO">Opening browser 'Firefox' to base url 'https://rahulshettyacademy.com/AutomationPractice/'.</msg>
+<msg timestamp="20220922 16:46:29.979" level="INFO">Firefox driver log is always forced to to: C:\.vscode\Selenium Helloworld\geckodriver-18.log</msg>
+<msg timestamp="20220922 17:05:37.627" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: TypeError: win is null
+Stacktrace:
+capture.canvas@chrome://remote/content/marionette/capture.js:84:17
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:261:37
+observe@resource://gre/modules/AsyncShutdown.jsm:576:16
+</msg>
+<msg timestamp="20220922 17:05:37.662" level="FAIL">WebDriverException: Message: Failed to decode response from marionette
+</msg>
+<status status="FAIL" starttime="20220922 16:46:29.952" endtime="20220922 17:05:37.714"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220922 17:05:37.720" endtime="20220922 17:05:37.720"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" starttime="20220922 17:05:37.720" endtime="20220922 17:05:37.720"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20220922 17:05:37.721" endtime="20220922 17:05:37.721"/>
+</kw>
+<tag>REGRESSION</tag>
+<status status="FAIL" starttime="20220922 16:46:29.947" endtime="20220922 17:05:37.724">WebDriverException: Message: Failed to decode response from marionette
+</status>
+</test>
+<status status="FAIL" starttime="20220922 16:42:13.572" endtime="20220922 17:05:37.740"/>
+</suite>
+<suite id="s1-s10" name="Tests" source="C:\.vscode\Selenium Helloworld\tests">
+<suite id="s1-s10-s1" name="Helloworld" source="C:\.vscode\Selenium Helloworld\tests\Helloworld.robot">
+<test id="s1-s10-s1-t1" name="First Test" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220922 17:05:37.861" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<status status="PASS" starttime="20220922 17:05:37.860" endtime="20220922 17:05:46.739"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220922 17:05:46.739" endtime="20220922 17:05:48.990"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name="q"]</arg>
+<arg>SeleniumLibrary</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220922 17:05:48.996" level="INFO">Typing text 'SeleniumLibrary' into text field '//input[@name="q"]'.</msg>
+<status status="PASS" starttime="20220922 17:05:48.992" endtime="20220922 17:05:55.748"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220922 17:05:58.767" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220922 17:05:55.749" endtime="20220922 17:05:58.768"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220922 17:05:58.770" endtime="20220922 17:06:02.951"/>
+</kw>
+<kw name="Hey Mama" library="shop">
+<msg timestamp="20220922 17:06:02.953" level="INFO">hello</msg>
+<status status="PASS" starttime="20220922 17:06:02.951" endtime="20220922 17:06:02.953"/>
+</kw>
+<kw name="Sum Of Integers">
+<arg>@{numbers}</arg>
+<msg timestamp="20220922 17:06:03.285" level="FAIL">No keyword with name 'Sum Of Integers' found.</msg>
+<status status="FAIL" starttime="20220922 17:06:03.285" endtime="20220922 17:06:03.285"/>
+</kw>
+<status status="FAIL" starttime="20220922 17:05:37.858" endtime="20220922 17:06:03.286">No keyword with name 'Sum Of Integers' found.</status>
+</test>
+<status status="FAIL" starttime="20220922 17:05:37.775" endtime="20220922 17:06:03.286"/>
+</suite>
+<status status="FAIL" starttime="20220922 17:05:37.746" endtime="20220922 17:06:03.287"/>
+</suite>
+<status status="FAIL" starttime="20220922 16:32:04.179" endtime="20220922 17:06:03.288"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="9" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">REGRESSION</stat>
+<stat pass="0" fail="1" skip="0">SMOKE</stat>
+</tag>
+<suite>
+<stat pass="4" fail="9" skip="0" id="s1" name="Selenium Helloworld">Selenium Helloworld</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Bookmyshow">Selenium Helloworld.Bookmyshow</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s2" name="Datadriven">Selenium Helloworld.Datadriven</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="Dictionary">Selenium Helloworld.Dictionary</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s4" name="Helloworld2">Selenium Helloworld.Helloworld2</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s5" name="Linkedin">Selenium Helloworld.Linkedin</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s6" name="ListRetrieveselenium">Selenium Helloworld.ListRetrieveselenium</stat>
+<stat pass="0" fail="3" skip="0" id="s1-s7" name="Multipletestdata">Selenium Helloworld.Multipletestdata</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s8" name="PostApi">Selenium Helloworld.PostApi</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s9" name="rahulshettyUIactions">Selenium Helloworld.rahulshettyUIactions</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s10" name="Tests">Selenium Helloworld.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s10-s1" name="Helloworld">Selenium Helloworld.Tests.Helloworld</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220922 16:32:58.685" level="ERROR">[ DataDriver ] Error in robot file:
+  File "C:\.vscode\Selenium Helloworld\datadriven.robot", line 0</msg>
+<msg timestamp="20220922 16:32:58.685" level="ERROR">In source file:
+  File "testdata.csv", line 5</msg>
+<msg timestamp="20220922 16:32:58.688" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: IndexError: list index out of range</msg>
+<msg timestamp="20220922 17:05:37.627" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: TypeError: win is null
+Stacktrace:
+capture.canvas@chrome://remote/content/marionette/capture.js:84:17
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:261:37
+observe@resource://gre/modules/AsyncShutdown.jsm:576:16
+</msg>
+</errors>
+</robot>
